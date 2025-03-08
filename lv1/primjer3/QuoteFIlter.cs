@@ -19,7 +19,7 @@
         return aboveAverageRatedQuotes;
     }
 
-    public double CalculateVotesSum(IList<Quote> quotes)
+    public double CalculateAverageVotes(IList<Quote> quotes)
     {
         double voteSum = 0.0;
         foreach (Quote quote in quotes)
@@ -27,12 +27,7 @@
             voteSum += quote.Votes;
         }
 
-        return voteSum;
-    }
-
-    public double CalculateAverageVotes(IList<Quote> quotes)
-    {
-        return CalculateVotesSum(quotes) / quotes.Count;
+        return voteSum / quotes.Count;
     }
 
     public IList<Quote> ExtractMostUpvotedPerAuthor(IList<Quote> quotes)
