@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LV2
+namespace zadatak1
 {
     class Die
     {
         private int numberOfSides;
         private Random randomGenerator;
-        public Die(int numberOfSides, Random randomGenerator)
+        public Die(int numberOfSides)
         {
             this.numberOfSides = numberOfSides;
-            this.randomGenerator = randomGenerator;
+            this.randomGenerator = new Random();
         }
         public int Roll()
         {

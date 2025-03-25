@@ -1,4 +1,6 @@
-﻿namespace LV2
+﻿using zadatak2;
+
+namespace zadatak1
 {
     internal class Program
     {
@@ -9,7 +11,7 @@
 
             for (int i = 0; i < 20; i++)
             {
-                diceRoller.InsertDie(new Die(6, random));
+                diceRoller.InsertDie(new Die(6));
             }
 
             diceRoller.RollAllDice();
