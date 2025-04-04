@@ -1,6 +1,4 @@
-﻿using zadatak2;
-
-namespace zadatak1
+﻿namespace zadatak1
 {
     internal class Program
     {
