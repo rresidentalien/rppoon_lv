@@ -9,7 +9,21 @@ class Adapter : IAnalytics
     }
     private double[][] ConvertData(Dataset dataset)
     {
-        //implementation missing!
+        IList<List<double>> data = dataset.GetData();
+        int rows = data.Count;
+        int cols = data[0].Count;
+        double[][] dataMatrix = new double[rows][];
+
+        for (int i = 0; i < rows; i++)
+        {
+            dataMatrix[i] = new double[cols];
+            for (int j = 0; j < cols; j++)
+            {
+                dataMatrix[i][j] = data[i][j];
+            }
+        }
+
+        return dataMatrix;
     }
     public double[] CalculateAveragePerColumn(Dataset dataset)
     {
